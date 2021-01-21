@@ -1,0 +1,63 @@
+<h1 class="title resist_title">建設現場の登録</h1>
+
+<div class="content form">
+  <div class="container">
+    <%= form_for [@company, @site] do |f| %>
+		
+		<div style="margin: 8px 0">
+			<%= f.label :建設現場名, style: { 'margin-right' => 8 } %>
+			<%= f.text_field :name, placeholder: "会社名", autofocus: true, value: '' %>
+		</div>
+
+		<div style="margin: 8px 0">
+			<%= f.label :住所, style: { 'margin-right' => 8 } %>
+			<%= f.text_field :address, placeholder: "住所", value: '' %>
+		</div>
+
+		<div style="margin: 8px 0">
+			<%= f.label :公開開始日, style: { 'margin-right' => 8 } %>
+			<%= f.date_field :start_date, placeholder: "工期開始日" %>
+		</div>
+		
+		<div style="margin: 8px 0">
+			<%= f.label :公開終了日, style: { 'margin-right' => 8 } %>
+			<%= f.date_field :end_date, placeholder: "工期終了日" %>
+
+		</div>
+
+		<div style="margin: 8px 0">
+			<%= f.label :募集人数, style: { 'margin-right' => 8 } %>
+			<%= f.number_field :resource, placeholder: "募集人数", value: 1, max: 100, min: 1 %>
+		</div>
+
+		<div style="margin: 8px 0">
+			<%= f.label :日当, style: { 'margin-right' => 8 } %>
+			<%= f.number_field :wage, placeholder: "日当", value: 7000, max: 100000, min: 0 %>円
+		</div>
+
+		<div style="margin: 8px 0">
+			<%= f.label :電話番号, style: { 'margin-right' => 8 } %>
+			<%= f.telephone_field :phone, placeholder: "電話番号", value: '' %>
+		</div>
+
+		<div style="margin: 8px 0">
+			<%= f.label :メールアドレス, style: { 'margin-right' => 8 } %>
+			<%= f.text_field :mail, placeholder: "メールアドレス", value: '' %>
+		</div>
+
+		<div style="margin: 8px 0">
+			<%= f.label :その他情報, style: { 'margin-right' => 8 } %>
+			<%= f.text_area :text, placeholder: "その他希望がございましたらご記入ください", value: '' %>
+		</div>
+		
+		<div class="row">
+			<div class="col10 push1">
+				<%= button_tag type: "submit", class: "btn btn--block" do %>
+				投稿する<i class="icon-arrow-right"></i>
+				<% end %>
+			</div>
+		</div>
+	<% end %>
+  </div>
+</div>
+
