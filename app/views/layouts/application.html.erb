@@ -10,6 +10,35 @@
   </head>
 
   <body>
+    <header class="header">
+        <%= link_to "Title", "/", class: "btn" %>
+        <% if user_signed_in? %>
+        <div class="menu">
+          <ul>
+            <li class="about"><%= link_to "〇〇とは", "/", class: "about" %></li>
+            <li><%= button_to "会社の登録", "/users/#{current_user.id}/companies/new", method: :get, class: "post" %></li>
+            <li><%= button_to "現場の登録", "/users/#{current_user.id}/works/new", method: :get, class: "post" %></li>
+            <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+
+          </ul>
+        </div>
+        <% else %>
+        <div class="menu">
+          <ul>
+            <li><%= link_to "ログイン", new_user_session_path, class: "post" %></li>
+            <li><%= link_to "新規登録", new_user_registration_path, class: "post" %></li>
+          </ul>
+        </div>
+        <% end %>
+    </header>
+
     <%= yield %>
+
+
+    <footer>
+      <p>
+        Copyright Title 2021.
+      </p>
+    </footer>
   </body>
 </html>
