@@ -25,8 +25,8 @@
         <% else %>
         <div class="menu">
           <ul>
-            <li><%= link_to "ログイン", new_user_session_path, class: "post" %></li>
-            <li><%= link_to "新規登録", new_user_registration_path, class: "post" %></li>
+            <li><%= button_to "ログイン", new_user_session_path, method: :get, class: "post" %></li>
+            <li><%= button_to "新規登録", new_user_registration_path, method: :get, class: "post" %></li>
           </ul>
         </div>
         <% end %>
