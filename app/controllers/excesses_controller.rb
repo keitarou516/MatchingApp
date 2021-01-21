@@ -1,0 +1,2 @@
+class ExcessesController < ApplicationController
+end
