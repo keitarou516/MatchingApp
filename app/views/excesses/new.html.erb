@@ -4,46 +4,50 @@
   <div class="container">
     <%= form_for [@company, @excess] do |f| %>
 		
-		<div style="margin: 8px 0">
-			<%= f.label :会社名, style: { 'margin-right' => 8 } %>
+		<div>
+			<%= f.label :会社名, style: { 'margin-right' => 8 } %><br />
 			<%= f.text_field :name, placeholder: "会社名", autofocus: true, value: '' %>
 		</div>
 
-		<div style="margin: 8px 0">
-			<%= f.label :公開開始日, style: { 'margin-right' => 8 } %>
-			<%= f.date_field :start_date, placeholder: "公開開始日" %>
-		</div>
-		
-		<div style="margin: 8px 0">
-			<%= f.label :公開終了日, style: { 'margin-right' => 8 } %>
-			<%= f.date_field :end_date, placeholder: "公開終了日" %>
+		<div class="date_form", style="display: flex">
+			<div style="margin: 8px 0, margin-right: 30px">
+				<%= f.label :公開開始日, style: { 'margin-right' => 30 } %><br />
+				<%= f.date_field :start_date, placeholder: "公開開始日" %>
+			</div>
+			　　　
+			<div>
+				<%= f.label :公開終了日, style: { 'margin-right' => 8 } %><br />
+				<%= f.date_field :end_date, placeholder: "公開終了日" %>
 
+			</div>
 		</div>
 
-		<div style="margin: 8px 0">
-			<%= f.label :派遣可能人数, style: { 'margin-right' => 8 } %>
+		<div>
+			<%= f.label :派遣可能人数, style: { 'margin-right' => 8 } %><br />
 			<%= f.number_field :resource, placeholder: "人数", value: 1, max: 100, min: 0 %>
 		</div>
 
-		<div style="margin: 8px 0">
-			<%= f.label :電話番号, style: { 'margin-right' => 8 } %>
-			<%= f.telephone_field :phone, placeholder: "電話番号", value: '' %>
+		<div class="contact_info", style="display: flex">
+			<div>
+				<%= f.label :電話番号, style: { 'margin-right' => 8 } %><br />
+				<%= f.telephone_field :phone, placeholder: "電話番号", value: '' %>
+			</div>
+			　　　
+			<div>
+				<%= f.label :メールアドレス, style: { 'margin-right' => 8 } %><br />
+				<%= f.text_field :mail, placeholder: "メールアドレス", value: '', class: "mail_form" %>
+			</div>
 		</div>
 
-		<div style="margin: 8px 0">
-			<%= f.label :メールアドレス, style: { 'margin-right' => 8 } %>
-			<%= f.text_field :mail, placeholder: "メールアドレス", value: '' %>
-		</div>
-
-		<div style="margin: 8px 0">
-			<%= f.label :その他情報, style: { 'margin-right' => 8 } %>
-			<%= f.text_area :text, placeholder: "その他希望がございましたらご記入ください", value: '' %>
+		<div>
+			<%= f.label :その他情報, style: { 'margin-right' => 8 } %><br />
+			<%= f.text_area :text, placeholder: "その他ご希望がございましたらご記入ください", value: '', class: "text_form" %>
 		</div>
 		
 		<div class="row">
 			<div class="col10 push1">
 				<%= button_tag type: "submit", class: "btn btn--block" do %>
-				投稿する<i class="icon-arrow-right"></i>
+				保存する<i class="icon-arrow-right"></i>
 				<% end %>
 			</div>
 		</div>
