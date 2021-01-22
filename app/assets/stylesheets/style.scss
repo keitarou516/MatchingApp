@@ -66,7 +66,7 @@ li {
     left: 0;
     top: 0;
     // z-index: 1;
-    background: #fff;
+    background: #f5f5f3;;
     width: 100%;
     margin: 0 auto;
 	min-width: 1100px;
@@ -77,6 +77,12 @@ li {
 		font-weight: bold;
 		width: 164px;
 		margin: 6px 0 0 30px;
+		img {
+			width: 100%;
+		}
+	}
+	.logo {
+		margin: 0 0 0 30px;
 	}
 	.menu {
 		float: right;
