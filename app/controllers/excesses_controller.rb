@@ -15,6 +15,11 @@ class ExcessesController < ApplicationController
 		redirect_to action: :index
 	end
 
+	def edit
+		@excess = Excess.find(params[:id])
+		
+	end
+
 	def destroy
 		excess = Excess.find(params[:id])
 		excess.destroy
