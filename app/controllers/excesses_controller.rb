@@ -40,7 +40,4 @@ class ExcessesController < ApplicationController
 		@company = Company.find(current_user.company_id)
 	end
 
-	def go_index
-		redirect_to action: :index
-	end
 end

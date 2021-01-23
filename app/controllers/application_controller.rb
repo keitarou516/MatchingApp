@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:sign_up, keys:[:company_key])
       devise_parameter_sanitizer.permit(:account_update, keys:[:company_key])
   end
+
+  def go_index
+		redirect_to action: :index
+	end
 end
