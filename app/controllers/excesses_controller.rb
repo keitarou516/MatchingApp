@@ -36,8 +36,4 @@ class ExcessesController < ApplicationController
 		params.require(:excess).permit(:name, :start_date, :end_date, :resource, :phone, :mail, :text).merge(company_id: params[:company_id])
 	end
 
-	def set_company
-		@company = Company.find(current_user.company_id)
-	end
-
 end

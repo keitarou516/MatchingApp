@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
   end
 
   def go_index
-		redirect_to action: :index
+    redirect_to action: :index
+  end
+  
+  def set_company
+		@company = Company.find(current_user.company_id)
 	end
 end
