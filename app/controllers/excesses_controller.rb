@@ -12,18 +12,22 @@ class ExcessesController < ApplicationController
 
 	def create
 		Excess.create(excess_params)
-		redirect_to action: :index
+		go_index
 	end
 
 	def edit
 		@excess = Excess.find(params[:id])
-		redirect_to action: :index		
+	end
+
+	def	update
+		Excess.update(excess_params)
+		go_index
 	end
 
 	def destroy
 		excess = Excess.find(params[:id])
 		excess.destroy
-		redirect_to action: :index
+		go_index
 	end
 
 	private
@@ -34,5 +38,9 @@ class ExcessesController < ApplicationController
 
 	def set_company
 		@company = Company.find(current_user.company_id)
+	end
+
+	def go_index
+		redirect_to action: :index
 	end
 end
