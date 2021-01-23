@@ -1,23 +1,21 @@
-<div class="content home user_page">
-		<div class="resist">
-			<ul class="list mypage">
-				<li><%= button_to "ユーザー情報の編集", "/", method: :get, class: "search_btn" %></li>
-			</ul>
-		</div>
+<div class="wrapper home">
+	<div class="title">マイページ</div>
+	<div class="content home">
+			<div class="resist">
+			<img alt="Company" src="/assets/company.jpg", class="service-img" />
+				<%= button_to "ユーザー情報の編集", "/", method: :get, class: "search_btn my_page" %>
+			</div>
 
-		<div class="resist">
-			<ul class="list mypage">
-				<li><%= button_to "会社の編集・削除", "/", method: :get, class: "search_btn" %></li>
-			</ul>
-		</div>
+			<div class="resist">
+				<img alt="Company" src="/assets/company.jpg", class="service-img" />
+				<%= button_to "会社の編集・削除", "/", method: :get, class: "search_btn my_page"  %>
+			</div>
 
-		<div class="resist">
-			<ul class="list mypage">
-				<li><%= button_to "現場の編集・削除", "/", method: :get, class: "search_btn" %></li>
-			</ul>
-		</div>
+			<div class="resist">
+				<img alt="Company" src="/assets/company.jpg", class="service-img" />
+				<%= button_to "現場の編集・削除", "/", method: :get, class: "search_btn my_page"  %>
+			</div>
+	</div>
 </div>
-
-
 
 
