@@ -1,10 +1,10 @@
 <h1 class="title">登録している余剰情報一覧</h1>
 	<div class="wrapper">
-		<div class="content excesses">
+		<div class="content index">
 		<% @excesses.each do |excess| %>
-			<div class="excess">
+			<div class="items">
 				<h3><%= excess.name %></h3>
-				<div class="excess-info">
+				<div class="item-info">
 					<ul>
 						<h4>公開期限</h4>
 						<li><span>開始　</span><%= excess.start_date %></li>
