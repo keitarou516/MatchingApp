@@ -14,7 +14,13 @@
 
 .content.my_page {
 	min-height: calc(100vh - 168px - 68px);
-
+	.resist {
+		margin: 70px;
+		.search_btn.my_page {
+			width: 270px;
+			height: 50px;
+		}
+	}
 }
 
 .form {
@@ -33,7 +39,3 @@
 	background-blend-mode:lighten;
 }
 
-.search_btn.my_page {
-	width: 250px;
-	height: 50px;
-}

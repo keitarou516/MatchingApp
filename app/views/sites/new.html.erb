@@ -28,10 +28,10 @@
 
 		<div class="info", style="display: flex">
 			<div>
-				<%= f.label :募集人数, style: { 'margin-right' => 8 } %><br />
+				<%= f.label :不足している人数, style: { 'margin-right' => 8 } %><br />
 				<%= f.number_field :resource, placeholder: "募集人数", value: 1, max: 100, min: 0 %>人
 			</div>
-			　　　　　　　　
+			　　　　
 			<div>
 				<%= f.label :日当, style: { 'margin-right' => 8 } %><br />
 				<%= f.number_field :wage, placeholder: "日当", value: 7000, step: "1000", max: 100000, min: 0 %>円

@@ -19,7 +19,7 @@
         <div class="menu">
           <ul>
             <li><%= button_to "マイページ", "/users/#{current_user.id}", method: :get, class: "post" %></li>
-            <li><%= button_to "会社の登録", "/companies/#{@company.id}/excesses/new", method: :get, class: "post" %></li>
+            <li><%= button_to "余剰情報の登録", "/companies/#{@company.id}/excesses/new", method: :get, class: "post" %></li>
             <li><%= button_to "現場の登録", "/companies/#{@company.id}/sites/new", method: :get, class: "post" %></li>
             <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
 
