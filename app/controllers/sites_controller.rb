@@ -15,6 +15,15 @@ class SitesController < ApplicationController
 		redirect_to action: :index
 	end
 
+	def edit
+		@site = Site.find(params[:id])
+	end
+
+	def	update
+		Site.update(site_params)
+		go_index
+	end
+
 	def destroy
 		site = Site.find(params[:id])
 		site.destroy
@@ -25,10 +34,6 @@ class SitesController < ApplicationController
 
 	def site_params
 		params.require(:site).permit(:name, :address, :start_date, :end_date, :resource, :wage, :phone, :mail, :text).merge(company_id: params[:company_id])
-	end
-
-	def set_company
-		@company = Company.find(current_user.company_id)
 	end
 
 end

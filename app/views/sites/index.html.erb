@@ -14,7 +14,7 @@
 					</ul>
 				</div>
 				<div class="btns">
-					<%= button_to "編集する", "/", method: :get, class: "search_btn" %>
+					<%= button_to "編集する", "/companies/#{@company.id}/sites/#{site.id}/edit", method: :get, class: "search_btn" %>
 					<%= button_to "削除する", "/companies/#{@company.id}/sites/#{site.id}", method: :delete, class: "search_btn" %>
 				</div>
 			</div>
