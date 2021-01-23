@@ -1,6 +1,20 @@
-.title {
-	padding: 20px;
-	text-align: center;
+
+.title.my_page {
+	font-family: 'M PLUS 1p', sans-serif;
+	font-size: 25px;
+	padding: 15px;
+	color: white;
+	color:black;
+
+
+//   -webkit-text-stroke: 2px darkblue;
+//   stroke:2px #000;
+
+}
+
+.content.my_page {
+	min-height: calc(100vh - 168px - 68px);
+
 }
 
 .form {
@@ -17,10 +31,6 @@
 	background-size : 100% 100%;
 	background-color:rgba(255,255,255,0.3);
 	background-blend-mode:lighten;
-}
-
-.list.mypage {
-	padding: 160px 80px;
 }
 
 .search_btn.my_page {

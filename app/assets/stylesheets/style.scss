@@ -2,10 +2,6 @@
 * {
     box-sizing: border-box;
 }
-
-body,html {
-	height: 100%;
-}
   
 body {
 // padding-top: 60px;
@@ -13,8 +9,14 @@ body {
     position: relative;/* ←相対位置 */
 	background-color: #fff;
 	box-sizing: border-box;
-	font-family: "游ゴシック", "YuGothic";
-	
+}
+
+body,html {
+	height: 100%;
+}
+
+body, input {
+	font-family: 'M PLUS 1p', sans-serif;
 }
   
 h1,h2,h3,h4,h5,h6,body {
@@ -125,6 +127,11 @@ footer {
 	border-top:	solid 1px rgb(0, 0, 0);
 }
 
+.title {
+	font-size: 20px;
+	padding: 18px;
+	text-align: center;
+}
 
 //　会社・現場登録画面
 
@@ -165,6 +172,7 @@ footer {
 	.col10 {
 		text-align: center;
 		.btn--block{
+			font-family: 'M PLUS 1p', sans-serif;
 			border-radius: 5px;
 			background-color: white;
 			margin-top: 10px;
