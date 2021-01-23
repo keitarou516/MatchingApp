@@ -1,25 +1,24 @@
 <h1 class="title">登録している余剰情報一覧</h1>
-<div class="wrapper">
-	<div class="content excesses">
-	<% @excesses.each do |excess| %>
-		<div class="excess">
-			<h3><%= excess.name %></h3>
-			<div class="excess-info">
-				<ul>
-					<h4>公開期限</h4>
-					<li><span>開始　</span><%= excess.start_date %></li>
-					<li><span>終了　</span><%= excess.end_date %></li>
-					<h4>余剰している人数</h4>
-					<li><%= excess.resource %>人</li>
-				</ul>
+	<div class="wrapper">
+		<div class="content excesses">
+		<% @excesses.each do |excess| %>
+			<div class="excess">
+				<h3><%= excess.name %></h3>
+				<div class="excess-info">
+					<ul>
+						<h4>公開期限</h4>
+						<li><span>開始　</span><%= excess.start_date %></li>
+						<li><span>終了　</span><%= excess.end_date %></li>
+						<h4>余剰している人数</h4>
+						<li><%= excess.resource %>人</li>
+					</ul>
+				</div>
+				<div class="btns">
+					<%= button_to "編集する", "/", method: :get, class: "search_btn" %>
+					<%= button_to "削除する", "/companies/#{@company.id}/excesses/#{excess.id}", method: :delete, class: "search_btn" %>
+				</div>
 			</div>
-			<div class="btns">
-				<%= button_to "編集する", "/", method: :get, class: "search_btn" %>
-				<%= button_to "削除する", "/", method: :get, class: "search_btn" %>
-			</div>
-		</div>
-
-	<% end %>
-</div>
+		<% end %>
+	</div>
 </div>
 
