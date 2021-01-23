@@ -1,5 +1,10 @@
 class ExcessesController < ApplicationController
 
+	def index
+		@company = Company.find(current_user.company_id)
+		@excesses = Excess.where(company_id: params[:company_id])
+	end
+
 	def new
 		@company = Company.find(current_user.company_id)
 		@excess = Excess.new

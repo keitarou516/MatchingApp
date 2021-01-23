@@ -1,3 +1,45 @@
-// Place all the styles related to the excesses controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.excesses {
+	flex-wrap: wrap;
+    justify-content: start;
+
+}
+
+.excess {
+	background: rgba(rgb(255, 255, 255), 0.8);
+	width: 250px;
+	height: 250px;
+	border-radius: 22px;
+	text-align: center;
+    margin: 19px;
+    text-decoration: none;
+    display: block;
+    background-size : 100% 100%;
+	border: solid 1px rgb(0, 0, 0);
+	padding: 20px;
+	.excess-info {
+		width: 100%;
+		padding: 10px;
+		margin: 10px 0;
+		background-color: white;
+		border: 1px black solid;
+		border-radius: 10px;
+		span {
+			font-weight: bold;
+			font-size: 13px;
+		}
+	}
+	.btns {
+		display: flex;
+		justify-content: space-around;
+		.search_btn {
+			font-size: 14px;
+			font-weight: bold;
+			width: 75px;
+			height: 25px;
+			color: black;
+			background-color: white; /*ボタン色*/
+		}
+	}
+	
+}
