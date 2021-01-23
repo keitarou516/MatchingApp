@@ -12,6 +12,13 @@ class SitesController < ApplicationController
 
 	def create
 		Site.create(site_params)
+		redirect_to action: :index
+	end
+
+	def destroy
+		site = Site.find(params[:id])
+		site.destroy
+		redirect_to action: :index
 	end
 
 	private
