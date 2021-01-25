@@ -1,7 +1,7 @@
 class ExcessesController < ApplicationController
 
 	before_action :set_company, except: [:create, :destroy]
-	before_action :set_excess, only: [:edit, :update, :destroy]
+	before_action :set_excess, only: [:edit, :update, :destroy, :show]
 
 	def index
 		@excesses = Excess.where(company_id: params[:company_id]).order("created_at ASC")
@@ -27,6 +27,10 @@ class ExcessesController < ApplicationController
 	def destroy
 		@excess.destroy
 		go_index
+	end
+
+	def show
+		@sites = Site.where('end_date > ? and ? > start_date', @excess.start_date, @excess.end_date)
 	end
 
 	private
