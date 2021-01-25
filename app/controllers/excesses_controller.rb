@@ -4,7 +4,7 @@ class ExcessesController < ApplicationController
 	before_action :set_excess, only: [:edit, :update, :destroy]
 
 	def index
-		@excesses = Excess.where(company_id: params[:company_id]).order("created_at DESC")
+		@excesses = Excess.where(company_id: params[:company_id]).order("created_at ASC")
 	end
 
 	def new
