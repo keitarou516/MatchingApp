@@ -22,11 +22,14 @@
 .content {
 	position: relative;
 	width: 100%;
-	min-height: calc(100vh - 168px - 68px);
+	min-height: calc(100vh - 148px - 68px);
 	display: flex;
 	justify-content: space-around;
 	align-items: start;
   }
+.content.site-content {
+	height: 644px;              /* 高さ指定 */
+}
   .resist {
 	background: rgba(rgb(255, 255, 255), 0.8);
 	margin: 100px;
@@ -58,4 +61,8 @@
   }
   .service-btn.service-btn-for-programming {
 	background-color: #a93032;
+  }
+
+  .log-btn {
+	  text-align: center;
   }

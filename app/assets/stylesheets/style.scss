@@ -133,15 +133,21 @@ footer {
 
 //　会社・現場登録画面
 
+
+.container {
+}
+
 #new_site {
 	margin-bottom: 12px;
 }
-.new_site, .new_excess, .edit_site, .edit_excess {
-
+.new_site, .new_excess, .edit_site, .edit_excess, .new_user {
+	position: absolute; 
+	top: 50%;                    /* 親要素の半分下にずらす */
+	left: 50%;                   /* 親要素の半分右にずらす */
+	transform: translateY(-50%) translateX(-50%); 
 	background-color: white;
 	background: rgba(rgb(255, 255, 255), 0.9);
-    width: 660px;
-	margin-top: 12px;
+	width: 660px;
 	padding: 25px;
 	border-radius: 15px;
 	input {
