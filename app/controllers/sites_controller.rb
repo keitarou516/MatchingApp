@@ -4,7 +4,7 @@ class SitesController < ApplicationController
 	before_action :set_site, only: [:edit, :update, :destroy]
 	
 	def index
-		@sites = Site.where(company_id: params[:company_id]).order("created_at DESC")
+		@sites = Site.where(company_id: params[:company_id]).order("created_at ASC")
 	end
 
 	def new
@@ -35,7 +35,7 @@ class SitesController < ApplicationController
 		params.require(:site).permit(:name, :address, :start_date, :end_date, :resource, :wage, :phone, :mail, :text).merge(company_id: params[:company_id])
 	end
 
-	def set_excess
+	def set_site
 		@site = Site.find(params[:id])
 	end
 
