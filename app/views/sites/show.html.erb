@@ -3,7 +3,7 @@
 		<div class="content index">
 		<% @excesses.each do |excess| %>
 			<div class="items">
-				<h3><%= excess.name %></h3>
+				<h3><a href=<%= excess.company.url %> target=”_blank”><%= excess.name %></a></h3>
 				<div class="item-info">
 					<ul>
 						<h4>募集期間</h4>
