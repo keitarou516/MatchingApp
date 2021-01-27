@@ -1,0 +1,21 @@
+.match {
+	.items {
+	width: 575px;
+	height: 575px;
+	border-radius: 22px;
+	text-align: center;
+	margin: 19px 72px;
+	text-decoration: none;
+	display: block;
+	background-size: 100% 100%;
+	border: solid 1px black;
+	padding: 20px;
+		.item-info {
+			height: 472px;
+			span {
+				font-size: 18px;
+				font-family: 'M PLUS 1p', sans-serif;
+			}
+		}
+	}
+}

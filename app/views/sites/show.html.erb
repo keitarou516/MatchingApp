@@ -6,20 +6,18 @@
 				<h3><%= excess.name %></h3>
 				<div class="item-info">
 					<ul>
-						<h4>募集期限</h4>
-						<li><span>開始　</span><%= excess.start_date %></li>
-						<li><span>終了　</span><%= excess.end_date %></li>
+						<h4>募集期間</h4>
+						<li><%= excess.start_date %> ~ <%= excess.end_date %></li>
 						<h4>余剰している人数</h4>
 						<li><%= excess.resource %>人</li>
+						<h4>電話番号・メールアドレス</h4>
+						<li><i><%= excess.phone %></i>　　<i><%= excess.mail %></i></li>
+						<h4>その他情報</h4>
+						<li><%= excess.text %></li>
 					</ul>
 				</div>
 				<div class="btns">
-					<% unless params[:authentication_id] %>
-						<%= button_to "編集する", "/companies/#{@company.id}/excesses/#{excess.id}/edit", method: :get, class: "search_btn" %>
-						<%= button_to "削除する", "/companies/#{@company.id}/excesses/#{excess.id}", method: :delete, class: "search_btn" %>
-					<% else %>
-						<%= button_to "マッチする現場を探す", "/companies/#{@company.id}/excesses/#{excess.id}", method: :get, class: "search_btn", style: "width: 200px;" %>
-					<% end %>
+						<%= button_to "メッセージを送る", "/companies/#{@company.id}/excesses/#{excess.id}", method: :get, class: "search_btn", style: "width: 200px; background-color: #f30da2; color: white;" %>
 				</div>
 			</div>
 		<% end %>

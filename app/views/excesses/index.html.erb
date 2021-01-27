@@ -18,7 +18,7 @@
 						<%= button_to "編集する", "/companies/#{@company.id}/excesses/#{excess.id}/edit", method: :get, class: "search_btn" %>
 						<%= button_to "削除する", "/companies/#{@company.id}/excesses/#{excess.id}", method: :delete, class: "search_btn" %>
 					<% else %>
-						<%= button_to "マッチする現場を探す", "/companies/#{@company.id}/excesses/#{excess.id}", method: :get, class: "search_btn", style: "width: 200px;" %>
+						<%= button_to "マッチした現場を見る", "/companies/#{@company.id}/excesses/#{excess.id}", method: :get, class: "search_btn", style: "width: 200px;" %>
 					<% end %>
 				</div>
 			</div>

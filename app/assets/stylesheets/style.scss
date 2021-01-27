@@ -89,7 +89,7 @@ li {
 	.logo {
 		margin: 0 0 0 30px;
 	}
-	.menu {
+	.header-menu {
 		float: right;
 		width: 60%;
 		padding: 0 40px 0 200px;
@@ -131,11 +131,69 @@ footer {
 	text-align: center;
 }
 
-//　会社・現場登録画面
+// 共通画面 wrapper, content
 
-
-.container {
+.wrapper {
+	padding-top: 20px;
+	background-image: url("20130321-P3210210_TP_V.jpg");
+	background-size : 100% 100%;
+	background-color:rgba(255,255,255,0.3);
+	background-blend-mode:lighten;
 }
+
+.wrapper.match {
+	background-image: url("00000006_eye_catch.jpg");
+}
+
+.content {
+	position: relative;
+	width: 100%;
+	min-height: calc(100vh - 148px - 68px);
+	display: flex;
+	justify-content: space-around;
+	align-items: start;
+  }
+
+
+.content.site-content {
+	height: 644px;              /* 高さ指定 */
+}
+
+// 共通画面 menu
+.menu {
+	background: rgba(rgb(255, 255, 255), 0.8);
+	margin: 100px;
+	width: 300px;
+	height: 300px;
+	border-radius: 22px;
+	text-align: center;
+}
+
+.service-img {
+	border-radius: 25px;
+	padding: 20px;
+	width: 100%;
+}
+
+.list {
+	  margin: 0;
+}
+
+.search_btn {
+	display: inline-block;
+	border-radius: 22px;
+	font-size: 25px;
+	font-weight: bold;
+	width: 200px;
+	height: 50px;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	background-color: #d4007c; /*ボタン色*/
+	transition: all 0.5s;
+}
+
+//　会社・現場登録画面
 
 #new_site {
 	margin-bottom: 12px;
@@ -185,6 +243,10 @@ footer {
 	}
 }
 
+.log-btn {
+	text-align: center;
+}
+
 // views/excesses/index.html.erb, views/sites/index.html.erbのcss
 
 .index {
@@ -230,3 +292,14 @@ footer {
 		}
 	}
 }
+
+// .width: 575px;
+// height: 575px;
+// border-radius: 22px;
+// text-align: center;
+// margin: 19px 72px;
+// text-decoration: none;
+// display: block;
+// background-size: 100% 100%;
+// border: solid 1px black;
+// padding: 20px;

@@ -1,12 +1,12 @@
 <div class="wrapper">
 	<div class="introduction"></div>
 	<div class="content home">
-			<div class="resist">
+			<div class="menu">
 			<img alt="Company" src="/assets/company.jpg", class="service-img" />
 				<%= button_to "会社を探す", "/companies/#{@company.id}/sites", method: :get, class: "search_btn", params: { authentication_id: 1 } %>
 			</div>
 
-			<div class="resist">
+			<div class="menu">
 			<img alt="Company" src="/assets/construction-silhouette_1150-8336.jpg", class="service-img" />
 				<%= button_to "現場を探す", "/companies/#{@company.id}/excesses/", method: :get, class: "search_btn", params: { authentication_id: 1 } %>
 			</div>

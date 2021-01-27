@@ -7,19 +7,21 @@
 				<div class="item-info">
 					<ul>
 						<h4>工期</h4>
-						<li><span>開始　</span><%= site.start_date %></li>
-						<li><span>終了　</span><%= site.end_date %></li>
+						<li><%= site.start_date %> ~ <%= site.end_date %></li>
 						<h4>不足している人数</h4>
 						<li><%= site.resource %>人</li>
+						<h4>住所</h4>
+						<li><%= site.address %></li>
+						<h4>日当</h4>
+						<li><%= site.wage %>円</li>
+						<h4>電話番号・メールアドレス</h4>
+						<li><i><%= site.phone %></i>　　<i><%= site.mail %></i></li>
+						<h4>その他情報</h4>
+						<li><%= site.text %></li>
 					</ul>
 				</div>
 				<div class="btns">
-					<% unless params[:authentication_id] %>
-						<%= button_to "編集する", "/companies/#{@company.id}/sites/#{site.id}/edit", method: :get, class: "search_btn" %>
-						<%= button_to "削除する", "/companies/#{@company.id}/sites/#{site.id}", method: :delete, class: "search_btn" %>
-					<% else %>
-						<%= button_to "マッチする会社を探す", "/companies/#{@company.id}/sites/#{site.id}", method: :get, class: "search_btn", style: "width: 200px;" %>
-					<% end %>
+						<%= button_to "メッセージを送る", "/companies/#{@company.id}/sites/#{site.id}", method: :get, class: "search_btn", style: "width: 200px; background-color: #f30da2; color: white;" %>
 				</div>
 			</div>
 		<% end %>
