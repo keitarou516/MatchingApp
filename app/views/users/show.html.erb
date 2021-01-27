@@ -4,7 +4,7 @@
 	<div class="content my_page">
 			<div class="menu">
 			<img alt="Company" src="/assets/company.jpg", class="service-img" />
-				<%= button_to "ユーザー情報の編集", "/", method: :get, class: "search_btn my_page" %>
+				<%= button_to "ユーザー情報の編集", "/users/#{params[:id]}/edit", method: :get, class: "search_btn my_page" %>
 			</div>
 
 			<div class="menu">
@@ -18,5 +18,3 @@
 			</div>
 	</div>
 </div>
-
-
