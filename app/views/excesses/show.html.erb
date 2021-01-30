@@ -21,7 +21,7 @@
 					</ul>
 				</div>
 				<div class="btns">
-						<%= button_to "メッセージを送る", "/companies/#{@company.id}/sites/#{site.id}", method: :get, class: "search_btn", style: "width: 200px; background-color: #f30da2; color: white;" %>
+						<%= button_to "メールを送る", "mailto:#{site.mail}", method: :get, class: "search_btn", style: "width: 200px; background-color: #f30da2; color: white;" %>
 				</div>
 			</div>
 		<% end %>
