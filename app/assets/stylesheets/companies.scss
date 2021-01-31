@@ -10,9 +10,13 @@
 	padding-top: 50px;
 }
 
+.wrapper.home {
+	padding-top: 30px;
+}
+
 .content.home {
-	min-height: calc(100vh - 261px - 68px);
+	min-height: calc(100vh - 291px - 68px);
 	.menu {
-		margin: 50px 100px;
+		margin: 20px 100px;
 	}
 }

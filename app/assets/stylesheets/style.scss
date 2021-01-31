@@ -78,12 +78,14 @@ li {
 	height: 78px;
 	.btn {
 		float: left;
-		font-size: 30px;
+		font-size: 50px;
 		font-weight: bold;
+		color: white;
 		width: 164px;
 		margin: 6px 0 0 30px;
 		img {
 			width: 100%;
+			height: 58px;
 		}
 	}
 	.logo {
@@ -129,12 +131,12 @@ footer {
 	font-size: 20px;
 	padding: 18px;
 	text-align: center;
+	border-bottom: 1px solid;
 }
 
 // 共通画面 wrapper, content
 
 .wrapper {
-	// padding-top: 20px;
 	background-image: url("20130321-P3210210_TP_V.jpg");
 	background-size : 100% 100%;
 	background-color:rgba(255,255,255,0.3);
@@ -142,9 +144,15 @@ footer {
 }
 
 .wrapper.match {
-	background-image: url("00000006_eye_catch.jpg");
+	background  : linear-gradient(135deg, #99ffff, #99ccff, #007fff);
 }
 
+.wrapper.index {
+	background-image: none;
+	.content {
+		background  : linear-gradient(135deg, #99ffff, #99ccff, #007fff);  /* BOXのグラデーション */
+	}
+}
 .content {
 	position: relative;
 	width: 100%;
@@ -153,7 +161,6 @@ footer {
 	justify-content: space-around;
 	align-items: start;
   }
-
 
 .content.site-content {
 	height: 644px;              /* 高さ指定 */
@@ -292,14 +299,3 @@ footer {
 		}
 	}
 }
-
-// .width: 575px;
-// height: 575px;
-// border-radius: 22px;
-// text-align: center;
-// margin: 19px 72px;
-// text-decoration: none;
-// display: block;
-// background-size: 100% 100%;
-// border: solid 1px black;
-// padding: 20px;

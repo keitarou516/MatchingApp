@@ -1,20 +1,20 @@
 <h1 class="title my_page">マイページ</h1>
 
-<div class="wrapper">
-	<div class="content my_page">
+<div class="wrapper my_page">
+	<div class="content">
 			<div class="menu">
-			<img alt="Company" src="/assets/company.jpg", class="service-img" />
-				<%= button_to "ユーザー情報の編集", "/users/#{params[:id]}/edit", method: :get, class: "search_btn my_page" %>
+			<img alt="Company" src="/assets/user_setting_48772-300x300.jpg", class="service-img" />
+				<%= button_to "ユーザー情報の編集", "/users/#{params[:id]}/edit", method: :get, class: "search_btn" %>
 			</div>
 
 			<div class="menu">
-				<img alt="Company" src="/assets/company.jpg", class="service-img" />
-				<%= button_to "登録した余剰情報一覧", "/companies/#{@company.id}/excesses/", method: :get, class: "search_btn my_page"  %>
+				<img alt="Company" src="/assets/240_F_183194041_KA8LDxbELht3pN3oEiOQVd9IhNAcyNm8.jpg", class="service-img" />
+				<%= button_to "登録した余剰情報一覧", "/companies/#{@company.id}/excesses/", method: :get, class: "search_btn"  %>
 			</div>
 
 			<div class="menu">
-				<img alt="Company" src="/assets/company.jpg", class="service-img" />
-				<%= button_to "登録した現場一覧", "/companies/#{@company.id}/sites", method: :get, class: "search_btn my_page"  %>
+				<img alt="Company" src="/assets/240_F_294720283_CovsA7pakHLXIxCOas4TJ50wgigqIaZK.jpg", class="service-img" />
+				<%= button_to "登録した現場一覧", "/companies/#{@company.id}/sites", method: :get, class: "search_btn"  %>
 			</div>
 	</div>
 </div>
