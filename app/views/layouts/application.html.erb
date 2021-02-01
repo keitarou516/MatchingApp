@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MatchingApp</title>
+    <title>ツナグ</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,7 +13,6 @@
 
   <body>
     <header class="header">
-        <%#= link_to "ツナグ", "/", class: "btn" %>
         <%= link_to image_tag("logo.png"), "/", class: "btn logo" %>
         <% if user_signed_in? %>
         <div class="header-menu">
