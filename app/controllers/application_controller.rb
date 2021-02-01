@@ -14,5 +14,10 @@ class ApplicationController < ActionController::Base
   
   def set_company
 		@company = Company.find(current_user.company_id)
-	end
+  end
+  
+  def set_site
+		@site = Site.find(params[:id])
+  end
+  
 end

@@ -31,17 +31,13 @@ class SitesController < ApplicationController
 
 	def show
 		@excesses = Excess.where('end_date > ? and ? > start_date', @site.start_date, @site.end_date)
-		@excesses = @excesses.select { |excess| (@site.resource <= @excesses.resource ) && (@site.resource != 0)} && @site.company_id != current_user.company_id
+		@excesses = @excesses.select { |excess| (@site.resource != 0) && (excess.company_id != current_user.company_id)}
 	end
 
 	private
 
 	def site_params
 		params.require(:site).permit(:name, :address, :start_date, :end_date, :resource, :wage, :phone, :mail, :text).merge(company_id: params[:company_id])
-	end
-
-	def set_site
-		@site = Site.find(params[:id])
 	end
 
 end

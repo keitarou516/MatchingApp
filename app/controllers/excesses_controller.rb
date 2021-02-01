@@ -31,7 +31,7 @@ class ExcessesController < ApplicationController
 
 	def show
 		@sites = Site.where('end_date > ? and ? > start_date', @excess.start_date, @excess.end_date)
-		@sites = @sites.select { |site| (@excess.resource <= site.resource ) && (@excess.resource != 0)} && @excess.company_id != current_user.company_id
+		@sites = @sites.select { |site| (@excess.resource != 0) && (site.company_id != current_user.company_id) }
 	end
 
 	private
